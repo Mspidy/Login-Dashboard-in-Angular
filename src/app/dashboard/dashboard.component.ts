@@ -13,20 +13,21 @@ export class DashboardComponent {
   currentValue=0
   gaugeType:any = "arch";
   gaugeValue = 0;
+  gaugeValue2 = 0;
+  gaugeValue3 = 0;
+  gaugeValue4 = 0;
+  gaugeValue5 = 0;
   gaugeLabel = "Speed";
   gaugeAppendText = "r/s";
   
   ngOnInit(){
-    this.gaugeFunction();
+    //this.gaugeFunction();
     //setInterval(this.fu,3000)
-    setInterval(this.getRandomNumber,3000)
+    //setInterval(this.getRandomNumber,3000)
 
   }
   ngAfterViewInit(){
-    // setTimeout( ()=>{
-    // this.gaugeFunction();
-    // this.getRandomNumber(0,100);
-    // }, 1000)
+    this.gaugeFunction();
     this.createChartLine()
   }
 
@@ -120,8 +121,13 @@ export class DashboardComponent {
   }
 
   gaugeFunction(){
-    console.log(this.getRandomNumber(0,100))
-    this.gaugeValue = this.getRandomNumber(0,100);
+    setInterval(() => {
+      this.gaugeValue = this.getRandomNumber(0,100);
+      this.gaugeValue2 = this.getRandomNumber(0,100)
+      this.gaugeValue3 = this.getRandomNumber(0,100)
+      this.gaugeValue4 = this.getRandomNumber(0,100)
+      this.gaugeValue5 = this.getRandomNumber(0,100)
+    }, 2000);
   }
   
   

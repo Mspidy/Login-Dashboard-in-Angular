@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgxGaugeModule } from 'ngx-gauge';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgxGaugeModule } from 'ngx-gauge';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    NgxGaugeModule
+    NgxGaugeModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,latin-ext">
+
+<!-- navbar -->
+<nav class="navbar">
+
+    <div class="container">
+        <img src="https://img.icons8.com/ios-glyphs/30/null/menu-rounded.png" />
+        <h1 class="logo"><a href="#">Energyviss/Live Dashboard</a></h1>
+        <ul class="nav nav-right">
+            <li><a href="#"><img src="https://img.icons8.com/material-rounded/24/null/reboot.png" /></a></li>
+            <li><a href="#"><img src="https://img.icons8.com/material-rounded/24/null/alarm-clock--v1.png" /></a></li>
+            <li><a href="#"><img src="https://img.icons8.com/ios-glyphs/30/null/user--v1.png" /></a></li>
+        </ul>
+    </div><!--/.container-->
+
+</nav><!--/.navbar-->
+
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <div class="select">
+                <mat-form-field appearance="fill">
+                    <mat-label>FLOOR</mat-label>
+                    <select matNativeControl required>
+                        <option value="volvo">1</option>
+                        <option value="saab">2</option>
+                        <option value="mercedes">3</option>
+                        <option value="audi">4</option>
+                    </select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>SECTION</mat-label>
+                    <select matNativeControl required>
+                        <option value="volvo">Lab 1</option>
+                        <option value="saab">Lab 2</option>
+                        <option value="mercedes">Lab 3</option>
+                        <option value="audi">Lab 4</option>
+                    </select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>VIEW</mat-label>
+                    <select matNativeControl required>
+                        <option value="volvo">Individual</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>METER</mat-label>
+                    <select matNativeControl required>
+                        <option value="volvo">Meter 1</option>
+                        <option value="saab">Meter 2</option>
+                        <option value="mercedes">Meter 3</option>
+                        <option value="audi">Meter 4</option>
+                    </select>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div><!--/.container-->
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <div class="selects">
+                <p>ENERGY: <span style="color: red;">156,610 kWh</span></p>
+                <p>LAST UPDATED: <span style="color: red;">22/06/2021 12:07 PM</span></p>
+                <p>NEXT HOUR PREDICTED ENERGY: <span style="color: red;">157,393.05kWh</span></p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <div class="select">
+                <ngx-gauge [size]=80 [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel"
+                    [append]="gaugeAppendText">
+                </ngx-gauge>
+                <ngx-gauge [size]=80 [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel"
+                    [append]="gaugeAppendText">
+                </ngx-gauge>
+                <ngx-gauge [size]=80 [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel"
+                    [append]="gaugeAppendText">
+                </ngx-gauge>
+                <ngx-gauge [size]=80 [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel"
+                    [append]="gaugeAppendText">
+                </ngx-gauge>
+                <ngx-gauge [size]=80 [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel"
+                    [append]="gaugeAppendText">
+                </ngx-gauge>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <div class="cont">
+        <mat-card class="card1">
+            <mat-card-content><div id="chart-line"></div></mat-card-content>
+        </mat-card>
+        <mat-card class="card2">
+            <mat-card-content><div id="chart-lines"></div></mat-card-content>
+        </mat-card>
+    </div>
+</div>
